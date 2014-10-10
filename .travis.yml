@@ -1,6 +1,5 @@
 language: c
 compiler:
- - clang
  - gcc
 script: export HB_COMPILER=$CC && make
 before_install:
