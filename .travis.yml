@@ -5,8 +5,9 @@ git:
 os: osx
 
 before_install:
+  - time travis_retry brew update || true
   - time travis_retry brew install --force-bottle --build-bottle wine || true
-  - export DISPLAY=:1
+  - export DISPLAY=
   - time wineboot
 
 script:
