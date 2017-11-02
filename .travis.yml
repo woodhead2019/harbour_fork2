@@ -5,9 +5,15 @@ git:
 os: osx
 
 before_install:
-  - time travis_retry brew update || true
-  - time travis_retry brew install --force-bottle --build-bottle wine || true
+  - time travis_retry brew update
+  - time travis_retry brew install --force-bottle --build-bottle wine
+  - echo "|${DISPLAY}|"
   - export DISPLAY=
+  - export WINEPREFIX="${HOME}/.wine"
+# - export WINEPREFIX=~/.winelaz
+# - export DISPLAY=:99
+# - export DISPLAY=:0
+  - echo "|${DISPLAY}|"
   - time wineboot
 
 script:
