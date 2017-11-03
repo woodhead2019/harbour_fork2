@@ -3,13 +3,15 @@ notifications:
 git:
   depth: 10
 os: osx
+env:
+  - DISPLAY=:0
+  - WINEDEBUG=trace+all
+  - WINEPREFIX=/home/travis/.wine
 
 before_install:
   - time travis_retry brew update > /dev/null
   - time travis_retry brew install --force-bottle --build-bottle wine
-# - export DISPLAY=:0
-#  DISPLAY=:88.0 WINEDEBUG=-all wineboot
-  - DISPLAY= WINEDEBUG=trace WINEPREFIX="${HOME}/.wine" time wineboot --init
+  - DISPLAY=:0 WINEDEBUG=trace+all WINEPREFIX=/home/travis/.wine time wineboot --init
 
 script:
   - echo Done.
