@@ -10,6 +10,8 @@ before_install:
   - echo "|${DISPLAY}|"
 # - export DISPLAY=
   - export WINEPREFIX="${HOME}/.wine"
+  - export WINEDEBUG=trace
+  - export WINELOADERNOEXEC=1
 # - export DISPLAY=:99
 # - export DISPLAY=:0
   - echo "|${DISPLAY}|"
