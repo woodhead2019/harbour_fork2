@@ -8,7 +8,7 @@ before_install:
   - time travis_retry brew update
   - time travis_retry brew install --force-bottle --build-bottle wine
   - echo "|${DISPLAY}|"
-  - export DISPLAY=
+# - export DISPLAY=
   - export WINEPREFIX="${HOME}/.wine"
 # - export WINEPREFIX=~/.winelaz
 # - export DISPLAY=:99
