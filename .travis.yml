@@ -3,10 +3,6 @@ notifications:
 git:
   depth: 10
 os: osx
-env:
-  - DISPLAY=:0
-  - WINEDEBUG=trace+all
-  - WINEPREFIX=/home/travis/.wine
 
 before_install:
   - time travis_retry brew update > /dev/null
