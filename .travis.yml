@@ -7,15 +7,9 @@ os: osx
 before_install:
   - time travis_retry brew update > /dev/null
   - time travis_retry brew install --force-bottle --build-bottle wine
-  - echo "|${DISPLAY}|"
-# - export DISPLAY=
-  - export WINEPREFIX="${HOME}/.wine"
-  - export WINEDEBUG=trace
-  - export WINELOADERNOEXEC=1
-# - export DISPLAY=:99
 # - export DISPLAY=:0
-  - echo "|${DISPLAY}|"
-  - time wineboot --init
+#  DISPLAY=:88.0 WINEDEBUG=-all wineboot
+  - DISPLAY= WINEDEBUG=trace WINEPREFIX="${HOME}/.wine" time wineboot --init
 
 script:
   - echo Done.
