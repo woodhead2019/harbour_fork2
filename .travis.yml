@@ -10,7 +10,7 @@ before_install:
 # - time travis_retry brew install wine
   - # export DISPLAY=:0
   - # export WINEPREFIX="${HOME}/.wine"
-  - time wineboot --init
+  - time wineboot
 
 script:
   - echo Done!
