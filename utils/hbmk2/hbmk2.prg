@@ -1,7 +1,7 @@
 /*
  * Harbour Make (alias mk/hbmk/hbmk2/hbrun)
  *
- * Copyright 1999-2017 Viktor Szakats (vszakats.net/harbour)
+ * Copyright 1999-2017 Viktor Szakats (vsz.me/hb)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -58,7 +58,7 @@
 
 /*
    Interesting C build overview from the author of a similar tool:
-      http://nethack4.org/blog/building-c.html
+      https://web.archive.org/web/nethack4.org/blog/building-c.html
    About autotools:
       https://autotools.io/
 
@@ -67,7 +67,7 @@
 
    Markdown syntax:
       https://daringfireball.net/projects/markdown/syntax
-      http://spec.commonmark.org/ (CommonMark)
+      https://spec.commonmark.org/ (CommonMark)
       https://johnmacfarlane.net/babelmark2/
 
    Markdown to man page converter:
@@ -8582,7 +8582,7 @@ STATIC FUNCTION __hbmk( aArgs, nArgTarget, nLevel, /* @ */ lPause, /* @ */ lExit
             CASE HBMK_ISPLAT( "win|wce" )
                /* On MS Windows, code signing is just as a horrible mess as generally
                   everything else:
-                     http://www.davidegrayson.com/signing/
+                     https://www.davidegrayson.com/signing/
                 */
                DO CASE
                CASE ( cBin_Sign := FindInPath( "signtool.exe" ) ) != NIL /* in MS Windows SDK */
@@ -11902,7 +11902,7 @@ STATIC FUNCTION FN_Expand( cFileName, lCommandLine )
       /* Partial workaround for Windows filename matching behavior,
          where '*.ext' will match '*.ext*' because 8.3 matches are
          also considered valid by the OS (Thanks Microsoft):
-         https://blogs.msdn.com/b/oldnewthing/archive/2005/07/20/440918/
+         https://devblogs.microsoft.com/oldnewthing/?p=34883 [2005-07-20]
          [vszakats] */
       IF FNameHasWildcard( hb_FNameExt( cFileName ) ) .OR. ;
          hb_FileMatch( hb_FNameExt( aFile[ F_NAME ] ), hb_FNameExt( cFileName ) )
@@ -19460,7 +19460,7 @@ STATIC PROCEDURE ShowHelp( hbmk, lMore, lLong )
 
    LOCAL aLst_Auth := { ;
       , ;
-      { "Viktor Szakats (vszakats.net/harbour)", "" } }
+      { "Viktor Szakats (vsz.me/hb)", "" } }
 
    /* Examples */
 

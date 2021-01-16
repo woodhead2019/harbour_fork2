@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright 2017 Viktor Szakats <https://vszakats.net/>
+# Copyright 2017 Viktor Szakats <https://vsz.me/>
 # License: The MIT license (MIT)
 
 set -ue
@@ -23,7 +23,7 @@ MXE_INST_LINUX    Install 'linux-gnu' packages. Default: no
 
 Required: ar (BSD), gpg, curl, openssl, awk, sed, tar, gzip
 
-Author: Viktor Szakats <https://vszakats.net/>"
+Author: Viktor Szakats <https://vsz.me/>"
 }
 
 mxe_curl() {
@@ -108,7 +108,7 @@ mkdir -p "${MXE_HOME}"
 (
   cd "${MXE_HOME}" || exit
 
-  base='http://pkg.mxe.cc/repos/apt/debian'  # APT root
+  base='https://pkg.mxe.cc/repos/apt/debian'  # APT root
   suid='D43A795B73B16ABE9643FE1AFD8FFF16DB45C6AB'  # Signer UID
 
   alias gpg='gpg --batch --keyid-format LONG'

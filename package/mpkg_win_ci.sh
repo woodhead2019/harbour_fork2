@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------
-# Copyright 2015-2017 Viktor Szakats (vszakats.net/harbour)
+# Copyright 2015-2017 Viktor Szakats (vsz.me/hb)
 # See LICENSE.txt for licensing terms.
 # ---------------------------------------------------------------
 
@@ -57,7 +57,7 @@ case "${os}" in
   win)
     pacman --noconfirm --noprogressbar -S --needed p7zip mingw-w64-{i686,x86_64}-{jq,osslsigncode}
     # Dependencies for cross-builds:
-    #   http://pkg.mxe.cc/repos/
+    #   https://pkg.mxe.cc/repos/
     ;;
   mac)
     # Required:

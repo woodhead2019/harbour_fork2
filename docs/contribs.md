@@ -90,7 +90,7 @@ URL transfer library, supporting SSL, HTTP GET/PUT/POST/forms, HTTP2, SCP, FTPS,
 SFTP, FTP, LDAP, LDAPS, SMTP, SMTPS, IMAP, IMAPS, POP3, POP3S, TFTP, TELNET,
 FILE/SMB, proxies, cookies, authentication (Basic, Digest, NTLM, Negotiate,
 Kerberos), file transfer resume, http proxy tunneling and more.
-<span class="readmore-md">[Learn more](https://curl.haxx.se/libcurl/)</span>
+<span class="readmore-md">[Learn more](https://curl.se/libcurl/)</span>
 
 ## hbexpat
 
@@ -225,7 +225,7 @@ more) modules.
 
 Regression test framework
 
-## hbtip ([deprecated](https://github.com/vszakats/harbour-core/blob/master/contrib/hbtip/WARNING.txt), use `hbcurl` instead)
+## hbtip ([deprecated](https://github.com/vszakats/hb/blob/master/contrib/hbtip/WARNING.txt), use `hbcurl` instead)
 
 Object-oriented internet protocol library, written in Harbour. Supports HTTP,
 HTTPS, SMTP, SMTPS, POP3, FTP and more.
