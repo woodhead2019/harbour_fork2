@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------
-# Copyright 2015-2017 Viktor Szakats (vsz.me/hb)
+# Copyright 2015-2017 Viktor Szakats
 # See LICENSE.txt for licensing terms.
 # ---------------------------------------------------------------
 
@@ -16,9 +16,9 @@ case "$(uname)" in
   *BSD)    readonly os='bsd';;
 esac
 
-_BRANCH="${APPVEYOR_REPO_BRANCH}${TRAVIS_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
+_BRANCH="${APPVEYOR_REPO_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
 [ -n "${_BRANCH}" ] || _BRANCH="$(git symbolic-ref --short --quiet HEAD)"
-[ -n "${_BRANCH}" ] || _BRANCH='master'
+[ -n "${_BRANCH}" ] || _BRANCH='main'
 [ -n "${CC}" ] || CC="${_BRANCH}"
 CC4="$(echo "${CC}" | cut -c -4)"
 

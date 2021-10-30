@@ -2,19 +2,11 @@
 
 # Table of Contents
 
-1. [How to Donate](#how-to-donate)
-2. [How to Share](#how-to-share)
-3. [How to Get Involved](#how-to-get-involved)
-4. [Troubleshooting](#troubleshooting)
+1. [How to Share](#how-to-share)
+1. [How to Get Involved](#how-to-get-involved)
+1. [Troubleshooting](#troubleshooting)
 
 ---
-
-# How to Donate
-
-  You can donate to support the effort that goes into responding to issues.
-
-  * [PayPal](https://www.paypal.me/vszakats)
-
 
 # How to Share
 
@@ -193,5 +185,5 @@ Evaluate these points before reporting an issue:
 
 
 ---
-This document Copyright &copy;&nbsp;2009&ndash;present Viktor Szakats (vsz.me/hb)<br>
-[![Creative Commons Attribution-ShareAlike 4.0](https://vsz.me/assets/img/cc-by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+This document Copyright &copy;&nbsp;2009&ndash;present Viktor Szakats<br>
+[![Creative Commons Attribution-ShareAlike 4.0](https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/)

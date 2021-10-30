@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------
-# Copyright 2009-2017 Viktor Szakats (vsz.me/hb)
+# Copyright 2009-2017 Viktor Szakats
 # See LICENSE.txt for licensing terms.
 # ---------------------------------------------------------------
 
@@ -47,9 +47,9 @@ HB_DIR_MINGW_64="$(echo "${HB_DIR_MINGW_64}" | sed 's|\\|/|g')"
 HB_DR="hb${HB_VS}/"
 HB_ABSROOT="${HB_RT}/${HB_DR}"
 
-_BRANCH="${APPVEYOR_REPO_BRANCH}${TRAVIS_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
+_BRANCH="${APPVEYOR_REPO_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
 [ -n "${_BRANCH}" ] || _BRANCH="$(git symbolic-ref --short --quiet HEAD)"
-[ -n "${_BRANCH}" ] || _BRANCH='master'
+[ -n "${_BRANCH}" ] || _BRANCH='main'
 [ -n "${CC}" ] || CC="${_BRANCH}"
 [ -n "${HB_CC_TO_RELEASE}" ] || HB_CC_TO_RELEASE="${CC}"
 

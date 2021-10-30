@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------
-# Copyright 2015-2017 Viktor Szakats (vsz.me/hb)
+# Copyright 2015-2017 Viktor Szakats
 # See LICENSE.txt for licensing terms.
 # ---------------------------------------------------------------
 
@@ -19,9 +19,9 @@ case "$(uname)" in
   *BSD)    readonly os='bsd';;
 esac
 
-_BRANCH="${APPVEYOR_REPO_BRANCH}${TRAVIS_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
+_BRANCH="${APPVEYOR_REPO_BRANCH}${CI_BUILD_REF_NAME}${GIT_BRANCH}"
 [ -n "${_BRANCH}" ] || _BRANCH="$(git symbolic-ref --short --quiet HEAD)"
-[ -n "${_BRANCH}" ] || _BRANCH='master'
+[ -n "${_BRANCH}" ] || _BRANCH='main'
 [ -n "${CC}" ] || CC="${_BRANCH}"
 [ -n "${HB_CC_TO_RELEASE}" ] || HB_CC_TO_RELEASE="${CC}"
 CC4="$(echo "${CC}" | cut -c -4)"
@@ -130,7 +130,7 @@ export HB_BUILD_POSTRUN='"./hbmk2 --version" "./hbrun --version" "./hbtest -noen
 
 # decrypt code signing key
 
-CODESIGN_KEY="$(realpath './package')/vszakats.p12"
+CODESIGN_KEY="$(realpath './package')/sign-code.p12"
 (
   set +x
   if [ -n "${HB_CODESIGN_GPG_PASS}" ]; then
@@ -391,7 +391,7 @@ fi
 
 # documentation
 
-if [ "${_BRANCH#*master*}" != "${_BRANCH}" ] && \
+if [ "${_BRANCH#*main*}" != "${_BRANCH}" ] && \
    [ "${CC}" = "${HB_CC_TO_RELEASE}" ]; then
   "$(dirname "$0")/upd_doc.sh"
 fi
